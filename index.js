@@ -5,9 +5,9 @@ const https = require('https');
 
 function printSponsorMessage() {
     console.log('\n\x1b[36m=================================================================\x1b[0m');
-    console.log('\x1b[1m\x1b[35m✨  Want more zero-dependency AI developer tools? ✨\x1b[0m');
+    console.log('\x1b[1m\x1b[35m?? Want more zero-dependency AI developer tools? ?�\x1b[0m');
     console.log('Support the independent developer on Polar to keep this free:');
-    console.log('\n👉 \x1b[32mhttps://polar.sh/albert-dev\x1b[0m 👈');
+    console.log('\n?? \x1b[32mhttps://polar.sh/albert-dev\x1b[0m ??');
     console.log('\x1b[36m=================================================================\x1b[0m\n');
 }
 
@@ -82,7 +82,7 @@ const requestBody = JSON.stringify({
 
 const options = {
     hostname: 'generativelanguage.googleapis.com',
-    path: `/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`,
+    path: `/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -113,9 +113,7 @@ const req = https.request(options, (res) => {
             if (autoCommit) {
                 try {
                     console.log('\x1b[34m[ai-commit-pro]\x1b[0m Executing git commit...');
-                    // Escape quotes for bash/cmd
-                    const safeMessage = message.replace(/"/g, '\\"');
-                    execSync(`git commit -m "${safeMessage}"`, { stdio: 'inherit' });
+                    const { execFileSync } = require('child_process'); execFileSync('git', ['commit', '-m', message], { stdio: 'inherit' });
                     console.log('\x1b[32m[Success]\x1b[0m Changes committed successfully.');
                 } catch (e) {
                     console.error('\x1b[31mFailed to commit changes.\x1b[0m');
@@ -137,3 +135,4 @@ req.on('error', (e) => {
 
 req.write(requestBody);
 req.end();
+
