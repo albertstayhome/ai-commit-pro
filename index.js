@@ -7,7 +7,7 @@ function printSponsorMessage() {
     console.log('\n\x1b[36m=================================================================\x1b[0m');
     console.log('\x1b[1m\x1b[35m?? Want more zero-dependency AI developer tools? ?¨\x1b[0m');
     console.log('Support the independent developer on Polar to keep this free:');
-    console.log('\n?? \x1b[32mhttps://polar.sh/albert-dev\x1b[0m ??');
+    console.log('\n?? \x1b[32mhttps://polar.sh/albertstayhome\x1b[0m ??');
     console.log('\x1b[36m=================================================================\x1b[0m\n');
 }
 
