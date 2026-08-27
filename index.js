@@ -82,7 +82,7 @@ const requestBody = JSON.stringify({
 
 const options = {
     hostname: 'generativelanguage.googleapis.com',
-    path: `/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    path: `/v1beta/models/gemini-3.7-flash:generateContent?key=${apiKey}`,
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
