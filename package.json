@@ -1,0 +1,24 @@
+{
+  "name": "ai-commit-pro",
+  "version": "1.0.0",
+  "description": "Zero-dependency CLI tool that uses Gemini/Claude to automatically generate beautiful Conventional Commits from your git diff.",
+  "main": "index.js",
+  "bin": {
+    "ai-commit-pro": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "ai",
+    "gemini",
+    "claude",
+    "cli",
+    "zero-dependency",
+    "conventional-commits"
+  ],
+  "author": "albertstayhome",
+  "license": "MIT"
+}
